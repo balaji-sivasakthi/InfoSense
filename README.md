@@ -21,23 +21,31 @@ including the article URLs and their predicted categories.
 
 ## Back End:
 
-#### Scraping Service:
+### Scraping Service:
 
 A service that takes a news article URL, scrapes the article content, and returns it.
 
-#### Classification Service:
+### Classification Service:
 
 A service that takes the scraped article content and predicts its category
 using an AI model.
 Data Persistence Service: A service that stores each classification request and its result in a
 database and retrieves the history of past requests when needed.
 
+## Architecture
+<img src="https://github.com/balaji-sivasakthi/InfoSense/blob/609e776377ce74d248f10bbe77dd35abd6139324/images/arch.png">
+
 ## How to Run:
 
+### Client
 ```
 npm install
 ```
-
 ```
 npm run dev
+```
+### Server
+
+```
+uvivcorn main:app --reload
 ```
