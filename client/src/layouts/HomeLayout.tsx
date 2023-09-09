@@ -1,4 +1,6 @@
 import React from 'react'
+import Footer from '../components/Footer'
+import NavBar from '../components/NavBar'
 
 type Props = {
     children: React.ReactNode
@@ -6,7 +8,11 @@ type Props = {
 
 function HomeLayout({children}: Props) {
   return (
-    <div className='px-10 h-screen text-white bg-[#000000]'>{children}</div>
+    <div className='px-10 bg-black text-white'>
+      <NavBar/>
+      {children}
+      <Footer/>
+    </div>
   )
 }
 

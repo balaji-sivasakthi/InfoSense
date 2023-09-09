@@ -5,7 +5,7 @@ type Props = {};
 
 function Hero({}: Props) {
   return (
-    <div className="flex flex-col h-screen justify-center items-center space-y-4 p-[250px]">
+    <div className="flex flex-col justify-center items-center space-y-4 p-[250px]">
       <span className="text-xl text-blue-700 text-center">Meet InfoSense</span>
       <h1 className="text-6xl text-center mb-10">
         Unlock the Power of AI Writing for Exceptional Content.
