@@ -33,7 +33,7 @@ Data Persistence Service: A service that stores each classification request and 
 database and retrieves the history of past requests when needed.
 
 ## Architecture
-<img src="https://github.com/balaji-sivasakthi/InfoSense/blob/609e776377ce74d248f10bbe77dd35abd6139324/images/arch.png">
+<img src="https://github.com/balaji-sivasakthi/InfoSense/blob/2aa3755d1f44f58191c905a471751757d5b9afde/images/arch.png">
 
 ## How to Run:
 
