@@ -26,7 +26,7 @@ function SideBar({}: Props) {
       <ul>
         {navlist.map((item) => {
           return (
-            <li className={`${item.active ? "bg-blue-600 text-white":""} p-2  rounded-lg  text-center mb-2`}>
+            <li key={item.path} className={`${item.active ? "bg-blue-600 text-white":""} p-2  rounded-lg  text-center mb-2`}>
               <Link to={item.path}>{item.label}</Link>
             </li>
           );
