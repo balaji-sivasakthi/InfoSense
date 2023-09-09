@@ -50,5 +50,5 @@ npm run dev
 ### Server
 
 ```
-uvivcorn main:app --reload
+uvicorn main:app --reload
 ```
