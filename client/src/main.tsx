@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './view/app'
 import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import HomePage from './view/app/Home'
+import HomePage from './view/page/Home'
 import Details from './view/app/Details'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

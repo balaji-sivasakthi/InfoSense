@@ -5,7 +5,7 @@ import Button from "../Button";
 type Props = {};
 
 function NavBar({}: Props) {
-  const navigate = useNavigate() 
+  const navigate = useNavigate();
   const NavList = [
     {
       label: "About",
@@ -33,7 +33,13 @@ function NavBar({}: Props) {
         </ul>
       </div>
       <div>
-        <Button onClick={()=>{navigate('/app/dashboard')}}>Try Now</Button>
+        <Button
+          onClick={() => {
+            navigate("/app/dashboard");
+          }}
+        >
+          Try Now
+        </Button>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../Button";
+import { truncate } from "../../utils";
 
 type Props = {
   data: {
@@ -17,7 +18,7 @@ function History({ data }: Props) {
   return (
     <div className="border-2 p-3 mb-2 rounded flex justify-between items-center">
       <div className="space-y-4">
-        <h1 className="text-2xl mb-2">{title}</h1>
+        <h1 className="text-2xl mb-2">{truncate(title,70)}</h1>
         <span className="bg-blue-300 rounded-lg px-2 py-1">{category}</span>
         <p className="text-gray-500">{url}</p>
       </div>  
