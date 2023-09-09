@@ -6,7 +6,7 @@ type Props = {
 
 function HomeLayout({children}: Props) {
   return (
-    <div>{children}</div>
+    <div className='px-10 h-screen text-white bg-[#000000]'>{children}</div>
   )
 }
 
