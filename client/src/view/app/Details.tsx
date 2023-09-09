@@ -2,9 +2,7 @@ import { useParams } from "react-router-dom"
 import AppLayout from "../../layouts/AppLayout";
 import ArticleDetails from "../../components/Article";
 
-type Props = {
-    params:any
-}
+type Props = {}
 
 
 const articleData = [
