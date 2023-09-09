@@ -1,6 +1,7 @@
 <p align="center">
-AI-Powered News Article Classifier with History    
+ <img src="https://github.com/balaji-sivasakthi/InfoSense/blob/7c245e14905c1f408039cd3972ce925f94b9b997/client/src/assets/images/logo.png">
 </p>
+<h1 align="center"> AI-Powered News Article Classifier</h1>
 
 ## Objective:
 
@@ -33,7 +34,9 @@ Data Persistence Service: A service that stores each classification request and 
 database and retrieves the history of past requests when needed.
 
 ## Architecture
-<img src="https://github.com/balaji-sivasakthi/InfoSense/blob/609e776377ce74d248f10bbe77dd35abd6139324/images/arch.png">
+<p align="center">
+    <img src="https://github.com/balaji-sivasakthi/InfoSense/blob/2aa3755d1f44f58191c905a471751757d5b9afde/images/arch.png">
+</p>
 
 ## How to Run:
 
@@ -47,5 +50,5 @@ npm run dev
 ### Server
 
 ```
-uvivcorn main:app --reload
+uvicorn main:app --reload
 ```
