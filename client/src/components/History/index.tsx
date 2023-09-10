@@ -11,7 +11,7 @@ type Props = {
   };
 };
 
-function History({ data }: Props) {
+function History({ data }: Props) {  
   const { id, title, category, url } = data;
   const navigate = useNavigate();  
   

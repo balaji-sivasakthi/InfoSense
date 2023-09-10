@@ -4,14 +4,14 @@ type Props = {
   info: {
     id: string;
     title: string;
-    summary: string;
+    short_description: string;
     category: string;
     content: string;
     tags: string[];
   };
 };
 
-function ArticleDetails({ info }: Props) {
+function ArticleDetails({ info }: any) {
   console.log(info);
 
   return (
@@ -34,7 +34,7 @@ function ArticleDetails({ info }: Props) {
       </div>
       <div>
         <h1 className="text-2xl">Summary</h1>
-        <p>{info?.summary}</p>
+        <p>{info?.short_description}</p>
       </div>
       <div>
         <span className="text-2xl">Content</span>
