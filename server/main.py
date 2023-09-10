@@ -5,7 +5,7 @@ from services.predict import findCategory
 from fastapi.middleware.cors import CORSMiddleware
 from config.database import session
 from models.history import History
-import json
+from sqlalchemy import desc
 app = FastAPI()
 
 origins = [
@@ -30,7 +30,7 @@ class ArticleRequest(BaseModel):
 
 @app.get('/history/getAll')
 async def getAllHistory():
-    return session.query(History).all()
+    return session.query(History).order_by(desc(History.time_created)).all()
 
 @app.get('/history/{id}')
 async def getHistoryById(id):
@@ -39,12 +39,12 @@ async def getHistoryById(id):
 
 @app.post('/article/info')
 async def getInfo(req:ArticleRequest):
-
+    print(req.news_url)
     article = Article(req.news_url, language="en")
     article.download()
     article.parse()
     article.nlp()
-    category = findCategory(article.summary)
+    category = findCategory(article.text)
     human = History(title=article.title, content=article.text, short_description=article.summary, category=category, tags=article.tags)
     session.add(human)
     session.commit()
