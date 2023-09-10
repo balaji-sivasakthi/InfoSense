@@ -45,11 +45,12 @@ async def getInfo(req:ArticleRequest):
     article.parse()
     article.nlp()
     category = findCategory(article.text)
-    human = History(title=article.title, content=article.text, short_description=article.summary, category=category, tags=article.tags)
+    human = History(title=article.title, news_url=req.news_url, content=article.text, short_description=article.summary, category=category, tags=article.tags)
     session.add(human)
     session.commit()
     return {"title":article.title,
             "category":category,
+            "news_url":req.news_url,
             "content":article.text,
             "tags":article.tags, 
             "short_description":article.summary}

@@ -7,12 +7,12 @@ type Props = {
     id: string;
     title: string;
     category: string;
-    url: string;
+    news_url: string;
   };
 };
 
 function History({ data }: Props) {  
-  const { id, title, category, url } = data;
+  const { id, title, category, news_url } = data;
   const navigate = useNavigate();  
   
   return (
@@ -20,7 +20,7 @@ function History({ data }: Props) {
       <div className="space-y-4">
         <h1 className="text-2xl mb-2">{truncate(title,70)}</h1>
         <span className="bg-blue-300 rounded-lg px-2 py-1">{category}</span>
-        <p className="text-gray-500">{url}</p>
+        <p className="text-gray-500">{news_url}</p>
       </div>  
       <div>
         <Button onClick={()=>navigate(`/app/details/${id}`)}>View</Button>

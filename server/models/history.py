@@ -14,14 +14,16 @@ class History(Base):
     content = Column(String)
     category = Column(String)
     tags = Column(ARRAY(String))
+    news_url = Column(String)
     time_created = Column(DateTime(timezone=True), server_default=func.now())
     time_updated = Column(DateTime(timezone=True), onupdate=func.now())
 
-    def __init__(self, title, short_description, content, category, tags):
+    def __init__(self, title, news_url,short_description, content, category, tags):
         self.title = title
         self.short_description = short_description
         self.content = content
         self.category = category
+        self.news_url = news_url
         self.tags = tags 
 
 Base.metadata.create_all(bind=engine)
