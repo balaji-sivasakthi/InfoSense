@@ -26,8 +26,7 @@ export const getAllHistory = createAsyncThunk(
     reducers:{},
     extraReducers: (builder)=>{
       builder.addCase(getAllHistory.fulfilled,(state,action)=>{
-        let temp_data = state.data.filter(item=>item.id!=action.payload.id)
-        state.data = [...temp_data, action.payload]
+        state.data = action.payload
         state.loading = "succeeded"
       })
       builder.addCase(getAllHistory.rejected,(state)=>{
