@@ -49,4 +49,4 @@ async def getInfo(req:ArticleRequest):
     history = History(title=article.title, news_url=req.news_url, content=article.text, short_description=article.summary, category=category, tags=article.tags)
     session.add(history)
     session.commit()
-    return {}
+    return {history}
