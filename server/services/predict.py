@@ -1,28 +1,21 @@
 import pandas as pd
 import joblib,os
-import seaborn as sns
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import precision_recall_fscore_support as score, mean_squared_error
-from sklearn.metrics import confusion_matrix,accuracy_score
+from sklearn.metrics import accuracy_score
 from nltk.tokenize import word_tokenize
-from gensim.models.doc2vec import TaggedDocument
 import nltk 
 from nltk.corpus import stopwords
 from sklearn import preprocessing 
 from sklearn.feature_extraction.text import TfidfVectorizer
-import matplotlib.pyplot as plt
 import re
-import warnings
-import pickle
-from wordcloud import WordCloud
 
 # Vectorizer
-news_vectorizer = open("models\\Vectorizer", "rb")
+news_vectorizer = open("ML\\Vectorizer", "rb")
 news_cv = joblib.load(news_vectorizer)
 
 #Loading Model
