@@ -3,19 +3,8 @@ import axios from './../http-common';
 const addRequest = async (news_url:string) => {
     try {
         let response = await axios.post('/article/info',{news_url:news_url})
+        console.log(response);
         return await response.data
-    } catch (error) {
-        console.log("[> Error]", error);
-        
-    }
-}
-
-const getArticleInfo = async (news_url:string) => {
-    try {
-        const response = await axios.post('/article/getInfo',{
-            news_url:news_url
-        })
-        return response.data;
     } catch (error) {
         console.log("[> Error]", error);
     }
@@ -39,4 +28,4 @@ const getHistoryById = async (id:string) => {
         console.log("[> Error]", error);
     }
 }
-export default {addRequest, getArticleInfo, getAllHistory, getHistoryById}
+export default {addRequest, getAllHistory, getHistoryById}
