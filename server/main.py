@@ -32,6 +32,10 @@ class ArticleRequest(BaseModel):
 async def getAllHistory():
     return session.query(History).all()
 
+@app.get('/history/{id}')
+async def getHistoryById(id):
+    return session.query(History).get(id)
+
 
 @app.post('/article/info')
 async def getInfo(req:ArticleRequest):
