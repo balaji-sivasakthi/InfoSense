@@ -6,6 +6,12 @@
 ## **Description**:
 This web application classifies news articles into categories, tracks past classification requests, and provides users with insights into article categorization. It takes a news article URL as input, scrapes the article content, predicts its category using an AI model, stores the request and prediction in a database and displays the predicted category along with a history of past classification requests.
 
+## Preview
+<p align="center">
+ <img src="https://github.com/balaji-sivasakthi/InfoSense/blob/a8e32eecc61b7908f6fa8048aa6937ad4e6391be/client/src/assets/images/dashboard.png"">
+</p>
+
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
