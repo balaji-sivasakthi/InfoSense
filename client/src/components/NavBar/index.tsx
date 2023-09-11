@@ -1,36 +1,49 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "./../../assets/images/logo.png";
 import Button from "../Button";
 type Props = {};
 
 function NavBar({}: Props) {
   const navigate = useNavigate();
+  const {pathname} = useLocation()
+  console.log(pathname);
+  
   const NavList = [
     {
+      label: "Home",
+      path: "/",
+    },
+    {
       label: "About",
-      path: "/about",
+      path: "https://github.com/balaji-sivasakthi/InfoSense",
     },
     {
       label: "Features",
-      path: "/feature",
+      path: "https://github.com/balaji-sivasakthi/InfoSense",
+    },
+    {
+      label: "How to use",
+      path: "https://github.com/balaji-sivasakthi/InfoSense",
+    },
+    {
+      label: "Contribute",
+      path: "https://github.com/balaji-sivasakthi/InfoSense",
     },
   ];
   return (
     <div className="flex items-center justify-between py-5">
       <div className="flex items-center justify-between">
-        <div>
           <img src={logo} alt="" />
-        </div>
-        <ul>
+      </div>
+      <ul>
           {NavList.map((list) => {
             return (
-              <Link className="p-2 text-xl" to={list.path}>
+              <Link className={`p-2 ${list.path == pathname ? "text-blue-700":""} hover:text-blue-700`} to={list.path}>
                 {list.label}
               </Link>
             );
           })}
         </ul>
-      </div>
       <div>
         <Button
           onClick={() => {
