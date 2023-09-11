@@ -9,7 +9,6 @@ let base_url = (APP_MODE == 'development')
 
 let intance:Axios = axios.create({
     baseURL: base_url,
-    timeout: 3000,
 });
 
 export default intance;
