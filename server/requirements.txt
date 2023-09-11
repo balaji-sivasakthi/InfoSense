@@ -5,3 +5,4 @@ pandas
 joblib
 scikit-learn
 nltk
+newspaper3k
