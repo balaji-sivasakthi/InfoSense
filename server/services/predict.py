@@ -106,7 +106,10 @@ def process_text(text):
     return text
 
 def get_dataset():
-    data = pd.read_csv("data\BBC News Train.csv")
+    directory_path = "data"
+    file_name = "BBC News Train.csv"
+    file_path = os.path.join(directory_path, file_name)
+    data = pd.read_csv(file_path)
     data['News_length'] = data['Text'].str.len()
     data['Text_parsed'] = data['Text'].apply(process_text)
     label_encoder = preprocessing.LabelEncoder() 
