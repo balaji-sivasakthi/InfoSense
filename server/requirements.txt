@@ -7,3 +7,5 @@ scikit-learn
 nltk
 newspaper3k
 python-dotenv
+psycopg2-binary
+pydantic
