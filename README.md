@@ -3,52 +3,71 @@
 </p>
 <h1 align="center"> AI-Powered News Article Classifier</h1>
 
-## Objective:
+## **Description**:
+This web application classifies news articles into categories, tracks past classification requests, and provides users with insights into article categorization. It takes a news article URL as input, scrapes the article content, predicts its category using an AI model, stores the request and prediction in a database and displays the predicted category along with a history of past classification requests.
 
-The goal of this project is to create a web application that classifies news articles into
-categories and keeps track of past classification requests. The application should take a news article
-URL as input, scrape the article content, predict its category using an AI model, store the request and
-the prediction in a database, and display the predicted category as well as a history of past
-classification requests.
+## Table of Contents
 
-## User Interface:
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [License](#license)
 
-### Home Page:
+## Getting Started
 
-A landing page with instructions on how to use the application.
-Prediction Page: A form where users can enter a news article URL. After the URL is submitted, the
-application should display the predicted category as well as a history of past classification requests,
-including the article URLs and their predicted categories.
+Begin by setting up and running the project on your local machine.
 
-## Back End:
+### Prerequisites
 
-### Scraping Service:
+Before you begin, ensure you have the following prerequisites installed:
 
-A service that takes a news article URL, scrapes the article content, and returns it.
+- Nodejs
+- Python
 
-### Classification Service:
+### Installation
 
-A service that takes the scraped article content and predicts its category
-using an AI model.
-Data Persistence Service: A service that stores each classification request and its result in a
-database and retrieves the history of past requests when needed.
+Follow these steps to get the project up and running:
+
+1. Server
+
+   ```
+     cd server
+     pip install -r requirements.txt
+     uvicorn main:app --reload
+   ```
+
+3. Client
+   ```
+    cd client
+    npm install
+    npm run dev
+   ```
+
+## Usage
+
+To use the application:
+
+1. Navigate to the application's URL.
+2. Input a news article URL and submit the form.
+3. The application will scrape the article, predict its category, and display the result.
+4. Explore the history section to view past classification requests.
+
+## Features
+
+- **News Classification**: Automatically categorize news articles into predefined categories.
+- **Interactive Web Interface**: User-friendly React frontend for input and results.
+- **Machine Learning**: Utilizes AI models for article categorization.
+- **Database Storage**: Stores article requests and predictions for historical tracking.
+- **History Viewer**: Displays a history of past classification requests.
 
 ## Architecture
+
 <p align="center">
     <img src="https://github.com/balaji-sivasakthi/InfoSense/blob/2aa3755d1f44f58191c905a471751757d5b9afde/images/arch.png">
 </p>
 
-## How to Run:
+## License
 
-### Client
-```
-npm install
-```
-```
-npm run dev
-```
-### Server
-
-```
-uvicorn main:app --reload
-```
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
