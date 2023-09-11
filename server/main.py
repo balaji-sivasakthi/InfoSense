@@ -22,7 +22,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 @app.get('/')
 async def root():
     return {'message': 'Hello World!'}
@@ -32,12 +31,21 @@ class ArticleRequest(BaseModel):
 
 @app.get('/history/getAll')
 async def getAllHistory():
-    return session.query(History).order_by(desc(History.time_created)).all()
+    db_session = session()
+    try:
+        return db_session.query(History).order_by(desc(History.time_created)).all()
+    except Exception as ex:
+        db_session.rollback()
+        raise ex
 
 @app.get('/history/{id}')
 async def getHistoryById(id):
-    return session.query(History).get(id)
-
+    db_session = session()
+    try:
+        return db_session.query(History).get(id)
+    except Exception as ex:
+        db_session.rollback()
+        raise ex
 
 @app.post('/article/info')
 async def getInfo(req:ArticleRequest):
@@ -48,6 +56,11 @@ async def getInfo(req:ArticleRequest):
     article.nlp()
     category = findCategory(article.text)
     history = History(title=article.title, news_url=req.news_url, content=article.text, short_description=article.summary, category=category, tags=article.tags)
-    session.add(history)
-    session.commit()
+    db_session = session()
+    try:
+        db_session.add(history)
+        db_session.commit()
+    except Exception as ex:
+        db_session.rollback()
+        raise ex
     return {history}
