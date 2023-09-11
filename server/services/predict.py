@@ -15,7 +15,17 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import re
 
 # Vectorizer
-news_vectorizer = open("ML\\Vectorizer", "rb")
+directory_path = "ML"
+file_name = "Vectorizer"
+file_path = os.path.join(directory_path, file_name)
+
+try:
+    news_vectorizer = open(file_path, "rb")
+except FileNotFoundError:
+    print(f"The file '{file_name}' was not found in the directory '{directory_path}'.")
+except IOError as e:
+    print(f"An error occurred while opening the file: {e}")
+
 news_cv = joblib.load(news_vectorizer)
 
 #Loading Model
