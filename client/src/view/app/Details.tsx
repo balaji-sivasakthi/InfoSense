@@ -11,14 +11,14 @@ function Details({}: Props) {
     const {id} = useParams()
     const [data, setData] = useState<History>()
     
-    const getDetails = async (id)=>{
+    const getDetails = async (id:string)=>{
       return await ApiFactory
       .create(ApiFactory.history)
       ?.getHistoryById(id)
     }
 
     useEffect(()=>{
-        getDetails(id)
+        getDetails(id!)
         .then(result=>{
           setData(result)
           console.log(result);

@@ -5,6 +5,7 @@ import Index from './view/app/index'
 type Props = {};
 
 function App({}: Props) {
+  
   return (
         <Routes>
           <Route path="/" Component={HomePage} />

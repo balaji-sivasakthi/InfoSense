@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Button from '../Button'
 import ApiFactory from '../../api/factory'
 import { useDispatch } from 'react-redux'

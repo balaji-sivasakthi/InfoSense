@@ -1,4 +1,3 @@
-import React from 'react'
 import screenshot from './../../assets/images/dashboard.png'
 
 type Props = {}

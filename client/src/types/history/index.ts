@@ -3,7 +3,7 @@ export type History = {
     title:string;
     short_description:string;
     content:string;
-    tags:string;
+    tags:string[];
     category:string;
-    url:string
+    news_url:string
   }

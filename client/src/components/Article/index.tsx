@@ -1,17 +1,10 @@
-import React from "react";
+import { History } from "../../types/history";
 
 type Props = {
-  info: {
-    id: string;
-    title: string;
-    short_description: string;
-    category: string;
-    content: string;
-    tags: string[];
-  };
+  info:History
 };
 
-function ArticleDetails({ info }: any) {
+function ArticleDetails({ info }: Props) {
   console.log(info);
 
   return (

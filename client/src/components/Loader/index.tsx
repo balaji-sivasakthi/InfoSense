@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import LoadingSpin from "react-loading-spin";
-import { cn } from "../../utils";
 type Props = {
   isOpen: boolean;
 };

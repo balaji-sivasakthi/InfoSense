@@ -4,7 +4,8 @@ import { cn } from "../../utils";
 type Props = {
   children: React.ReactNode;
   className?: string;
-} & React.HTMLProps<HTMLButtonElement> & JSX.Element
+  onClick: ()=> void
+}
 
 const Button = ({ className, children, ...rest}: Props) => {
   return (
