@@ -10,6 +10,7 @@ from sklearn.metrics import accuracy_score
 from nltk.tokenize import word_tokenize
 import nltk 
 nltk.download('stopwords')
+nltk.download('punkt')
 from nltk.corpus import stopwords
 from sklearn import preprocessing 
 from sklearn.feature_extraction.text import TfidfVectorizer
