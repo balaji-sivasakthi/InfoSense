@@ -6,4 +6,4 @@ joblib
 scikit-learn
 nltk
 newspaper3k
-dotenv
+python-dotenv
