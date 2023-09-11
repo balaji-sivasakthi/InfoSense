@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": {
+    "name": "Balaji Sivasakthi",
+    "email": "balajisivasakthi2020@gmail.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
