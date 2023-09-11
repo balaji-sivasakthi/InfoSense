@@ -14,6 +14,8 @@ from sklearn import preprocessing
 from sklearn.feature_extraction.text import TfidfVectorizer
 import re
 
+nltk.download('stopwords')
+
 # Vectorizer
 directory_path = "ML"
 file_name = "Vectorizer"
