@@ -9,12 +9,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from nltk.tokenize import word_tokenize
 import nltk 
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from sklearn import preprocessing 
 from sklearn.feature_extraction.text import TfidfVectorizer
 import re
 
-nltk.download('stopwords')
 
 # Vectorizer
 directory_path = "ML"
