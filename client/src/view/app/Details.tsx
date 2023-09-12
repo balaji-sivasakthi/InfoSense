@@ -10,7 +10,6 @@ type Props = {};
 function Details({}: Props) {
     const { id } = useParams();
     const [data, setData] = useState<History>();
-
     const getDetails = async (id: string) => {
         return await ApiFactory.create(ApiFactory.history)?.getHistoryById(id);
     };
@@ -24,7 +23,7 @@ function Details({}: Props) {
 
     return (
         <AppLayout>
-            {data ? <ArticleDetails info={data} /> : <p>Not found</p>}
+            {data ? <ArticleDetails info={data} /> : <p>Loading...</p>}
         </AppLayout>
     );
 }
