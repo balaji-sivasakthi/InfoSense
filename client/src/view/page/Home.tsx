@@ -6,13 +6,13 @@ import HomeLayout from '../../layouts/HomeLayout'
 type Props = {}
 
 function HomePage({}: Props) {
-  return (
-    <HomeLayout>
-      <Hero/>
-      <Feature/>
-      <HowToUse/>
-    </HomeLayout>
-  )
+    return (
+        <HomeLayout>
+            <Hero />
+            <Feature />
+            <HowToUse />
+        </HomeLayout>
+    )
 }
 
 export default HomePage

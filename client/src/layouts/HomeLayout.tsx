@@ -6,14 +6,14 @@ type Props = {
     children: React.ReactNode
 }
 
-function HomeLayout({children}: Props) {
-  return (
-    <div className='px-10 bg-black text-white'>
-      <NavBar/>
-      {children}
-      <Footer/>
-    </div>
-  )
+function HomeLayout({ children }: Props) {
+    return (
+        <div className="px-10 bg-black text-white">
+            <NavBar />
+            {children}
+            <Footer />
+        </div>
+    )
 }
 
 export default HomeLayout
