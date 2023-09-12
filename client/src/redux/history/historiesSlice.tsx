@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import ApiFactory from '../../api/factory';
-import { HistoryState, type History } from '../../types/history';
+import { HistoryState } from '../../types/history';
 
 const _History = ApiFactory.create(ApiFactory.history);
 
