@@ -1,11 +1,11 @@
-import { History } from '../../types/history'
+import { History } from '../../types/history';
 
 type Props = {
-    info: History
-}
+    info: History;
+};
 
 function ArticleDetails({ info }: Props) {
-    console.log(info)
+    console.log(info);
 
     return (
         <div className="space-y-5">
@@ -36,7 +36,7 @@ function ArticleDetails({ info }: Props) {
                 <p>{info?.content}</p>
             </div>
         </div>
-    )
+    );
 }
 
-export default ArticleDetails
+export default ArticleDetails;

@@ -1,9 +1,9 @@
-import Feature from '../../containers/Feature'
-import Hero from '../../containers/Hero'
-import HowToUse from '../../containers/HowToUse'
-import HomeLayout from '../../layouts/HomeLayout'
+import Feature from '../../containers/Feature';
+import Hero from '../../containers/Hero';
+import HowToUse from '../../containers/HowToUse';
+import HomeLayout from '../../layouts/HomeLayout';
 
-type Props = {}
+type Props = {};
 
 function HomePage({}: Props) {
     return (
@@ -12,7 +12,7 @@ function HomePage({}: Props) {
             <Feature />
             <HowToUse />
         </HomeLayout>
-    )
+    );
 }
 
-export default HomePage
+export default HomePage;

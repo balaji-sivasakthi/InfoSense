@@ -1,19 +1,19 @@
-import { Link, useNavigate } from 'react-router-dom'
-import Button from '../Button'
-import { truncate } from '../../utils'
+import { Link, useNavigate } from 'react-router-dom';
+import Button from '../Button';
+import { truncate } from '../../utils';
 
 type Props = {
     data: {
-        id: string
-        title: string
-        category: string
-        news_url: string
-    }
-}
+        id: string;
+        title: string;
+        category: string;
+        news_url: string;
+    };
+};
 
 function History({ data }: Props) {
-    const { id, title, category, news_url } = data
-    const navigate = useNavigate()
+    const { id, title, category, news_url } = data;
+    const navigate = useNavigate();
 
     return (
         <div className="border-2 p-3 mb-2 rounded flex justify-between items-center hover:cursor-pointer hover:border-blue-600">
@@ -32,7 +32,7 @@ function History({ data }: Props) {
                 </Button>
             </div>
         </div>
-    )
+    );
 }
 
-export default History
+export default History;

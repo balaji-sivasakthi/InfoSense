@@ -1,9 +1,9 @@
-import { Link, useLocation } from 'react-router-dom'
-import logo from './../../assets/images/logo.png'
-type Props = {}
+import { Link, useLocation } from 'react-router-dom';
+import logo from './../../assets/images/logo.png';
+type Props = {};
 
 function SideBar({}: Props) {
-    const { pathname } = useLocation()
+    const { pathname } = useLocation();
     const navlist = [
         {
             label: 'Dashboard',
@@ -15,7 +15,7 @@ function SideBar({}: Props) {
             path: '/',
             active: pathname == '/',
         },
-    ]
+    ];
 
     return (
         <div className="flex-[0.2] border-2 rounded-lg p-2">
@@ -33,11 +33,11 @@ function SideBar({}: Props) {
                         >
                             <Link to={item.path}>{item.label}</Link>
                         </li>
-                    )
+                    );
                 })}
             </ul>
         </div>
-    )
+    );
 }
 
-export default SideBar
+export default SideBar;

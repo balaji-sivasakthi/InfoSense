@@ -1,12 +1,12 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import logo from './../../assets/images/logo.png'
-import Button from '../Button'
-type Props = {}
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import logo from './../../assets/images/logo.png';
+import Button from '../Button';
+type Props = {};
 
 function NavBar({}: Props) {
-    const navigate = useNavigate()
-    const { pathname } = useLocation()
-    console.log(pathname)
+    const navigate = useNavigate();
+    const { pathname } = useLocation();
+    console.log(pathname);
 
     const NavList = [
         {
@@ -29,7 +29,7 @@ function NavBar({}: Props) {
             label: 'Contribute',
             path: 'https://github.com/balaji-sivasakthi/InfoSense',
         },
-    ]
+    ];
     return (
         <div className="flex items-center justify-between py-5">
             <div className="flex items-center justify-between">
@@ -46,20 +46,20 @@ function NavBar({}: Props) {
                         >
                             {list.label}
                         </Link>
-                    )
+                    );
                 })}
             </ul>
             <div>
                 <Button
                     onClick={() => {
-                        navigate('/app/dashboard')
+                        navigate('/app/dashboard');
                     }}
                 >
                     Try Now
                 </Button>
             </div>
         </div>
-    )
+    );
 }
 
-export default NavBar
+export default NavBar;

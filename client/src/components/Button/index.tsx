@@ -1,11 +1,11 @@
-import React from 'react'
-import { cn } from '../../utils'
+import React from 'react';
+import { cn } from '../../utils';
 
 type Props = {
-    children: React.ReactNode
-    className?: string
-    onClick: () => void
-}
+    children: React.ReactNode;
+    className?: string;
+    onClick: () => void;
+};
 
 const Button = ({ className, children, ...rest }: Props) => {
     return (
@@ -18,7 +18,7 @@ const Button = ({ className, children, ...rest }: Props) => {
         >
             {children}
         </button>
-    )
-}
+    );
+};
 
-export default Button
+export default Button;

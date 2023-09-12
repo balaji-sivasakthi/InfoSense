@@ -1,18 +1,18 @@
-import React from 'react'
-import SideBar from '../components/Sidebar'
-import TopBar from '../components/TopBar'
-import { useLocation } from 'react-router-dom'
-import Loader from '../components/Loader'
-import { useSelector } from 'react-redux'
+import React from 'react';
+import SideBar from '../components/Sidebar';
+import TopBar from '../components/TopBar';
+import { useLocation } from 'react-router-dom';
+import Loader from '../components/Loader';
+import { useSelector } from 'react-redux';
 
 type Props = {
-    children: React.ReactNode
-}
+    children: React.ReactNode;
+};
 
 function AppLayout({ children }: Props) {
-    const { pathname } = useLocation()
-    const { loading } = useSelector((state: any) => state.loading)
-    console.log('[Loading]', loading)
+    const { pathname } = useLocation();
+    const { loading } = useSelector((state: any) => state.loading);
+    console.log('[Loading]', loading);
     return (
         <div className="flex">
             <SideBar />
@@ -24,7 +24,7 @@ function AppLayout({ children }: Props) {
             </main>
             <Loader isOpen={loading} />
         </div>
-    )
+    );
 }
 
-export default AppLayout
+export default AppLayout;

@@ -1,10 +1,10 @@
-import React from 'react'
-import Footer from '../components/Footer'
-import NavBar from '../components/NavBar'
+import React from 'react';
+import Footer from '../components/Footer';
+import NavBar from '../components/NavBar';
 
 type Props = {
-    children: React.ReactNode
-}
+    children: React.ReactNode;
+};
 
 function HomeLayout({ children }: Props) {
     return (
@@ -13,7 +13,7 @@ function HomeLayout({ children }: Props) {
             {children}
             <Footer />
         </div>
-    )
+    );
 }
 
-export default HomeLayout
+export default HomeLayout;

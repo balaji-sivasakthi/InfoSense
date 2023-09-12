@@ -1,10 +1,10 @@
-import { useNavigate } from 'react-router-dom'
-import Button from '../../components/Button'
+import { useNavigate } from 'react-router-dom';
+import Button from '../../components/Button';
 
-type Props = {}
+type Props = {};
 
 function Hero({}: Props) {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     return (
         <section
             id="home"
@@ -26,7 +26,7 @@ function Hero({}: Props) {
                 Try For Free
             </Button>
         </section>
-    )
+    );
 }
 
-export default Hero
+export default Hero;

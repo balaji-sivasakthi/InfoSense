@@ -1,13 +1,13 @@
-import SearchBar from '../SearchBar'
+import SearchBar from '../SearchBar';
 
-type Props = {}
+type Props = {};
 
 function TopBar({}: Props) {
     return (
         <div className="flex-1 mb-3">
             <SearchBar />
         </div>
-    )
+    );
 }
 
-export default TopBar
+export default TopBar;

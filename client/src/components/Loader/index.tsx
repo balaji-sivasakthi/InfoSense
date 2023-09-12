@@ -1,32 +1,32 @@
-import { useEffect } from 'react'
-import LoadingSpin from 'react-loading-spin'
+import { useEffect } from 'react';
+import LoadingSpin from 'react-loading-spin';
 type Props = {
-    isOpen: boolean
-}
+    isOpen: boolean;
+};
 
 function Loader({ isOpen }: Props) {
-    console.log(isOpen)
+    console.log(isOpen);
 
     useEffect(() => {
         if (isOpen) {
             const handleEvent = (event: Event) => {
-                ;(event.target as HTMLDocument).body.className =
-                    'overflow-hidden'
-            }
-            window.addEventListener('scroll', handleEvent)
+                (event.target as HTMLDocument).body.className =
+                    'overflow-hidden';
+            };
+            window.addEventListener('scroll', handleEvent);
             return () => {
-                window.removeEventListener('scroll', handleEvent)
-            }
+                window.removeEventListener('scroll', handleEvent);
+            };
         } else {
             const handleEvent = (event: Event) => {
-                ;(event.target as HTMLDocument).body.className = ''
-            }
-            window.addEventListener('scroll', handleEvent)
+                (event.target as HTMLDocument).body.className = '';
+            };
+            window.addEventListener('scroll', handleEvent);
             return () => {
-                window.removeEventListener('scroll', handleEvent)
-            }
+                window.removeEventListener('scroll', handleEvent);
+            };
         }
-    }, [isOpen])
+    }, [isOpen]);
     return (
         <div
             style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
@@ -38,7 +38,7 @@ function Loader({ isOpen }: Props) {
                 <LoadingSpin />
             </div>
         </div>
-    )
+    );
 }
 
-export default Loader
+export default Loader;

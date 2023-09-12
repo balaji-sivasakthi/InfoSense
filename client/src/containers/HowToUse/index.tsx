@@ -1,10 +1,10 @@
 import {
     VerticalTimeline,
     VerticalTimelineElement,
-} from 'react-vertical-timeline-component'
-import 'react-vertical-timeline-component/style.min.css'
+} from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
-type Props = {}
+type Props = {};
 
 function HowToUse({}: Props) {
     return (
@@ -101,7 +101,7 @@ function HowToUse({}: Props) {
                 </VerticalTimeline>
             </div>
         </section>
-    )
+    );
 }
 
-export default HowToUse
+export default HowToUse;
