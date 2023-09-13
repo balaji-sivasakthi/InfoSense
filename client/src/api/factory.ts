@@ -6,6 +6,8 @@ export default class ApiFactory {
         switch (type) {
             case this.history:
                 return _history;
+            default:
+                return undefined;
         }
     }
 }
