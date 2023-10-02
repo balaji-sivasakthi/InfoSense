@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from './../../assets/images/logo.png';
 import Button from '../Button';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useEffect } from 'react';
 type Props = {};
 
@@ -16,7 +16,6 @@ function NavBar({}: Props) {
         };
       }, []);
       const handleScroll = () => {
-        const scrollX = window.scrollX || window.pageXOffset;
         const scrollY = window.scrollY || window.pageYOffset;
         console.log(scrollY);
         if(scrollY>0){
@@ -27,7 +26,7 @@ function NavBar({}: Props) {
         }
       };
     const [s, setS] = useState<number>(0);
-    const nav = s === 1
+    const nav:any = s === 1
   ? {
       position: "fixed",
       top: 0,
