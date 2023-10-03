@@ -23,7 +23,7 @@ function History({ data }: Props) {
                     {category}
                 </span>
                 <p className="text-gray-500">
-                    <Link to={news_url}>{news_url}</Link>
+                    <Link to={news_url}>{truncate(news_url,90)}</Link>
                 </p>
             </div>
             <div>
